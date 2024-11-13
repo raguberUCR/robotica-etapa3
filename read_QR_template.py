@@ -5,6 +5,8 @@ import json
 import sqlite3
 import threading
 import time
+from Nao_Vocabulary import nao_vocabulary
+from Nao_Speech_Vocabulary import nao_speech
 
 #### Global variables
 shutdown = False
@@ -12,6 +14,13 @@ pause = False
 #### /Global variables
 
 #### Functions
+
+def detect_command_type(palabra):
+    for command_type, phrases in nao_vocabulary.items():
+        if palabra in phrases:
+            return command_type
+    return None
+
 def listen_stop_conditions(memory, speech_proxy):
     global shutdown, pause
     while not shutdown:
@@ -19,12 +28,13 @@ def listen_stop_conditions(memory, speech_proxy):
             comando = memory.getData("WordRecognized")
             if comando and len(comando) > 0:
                 palabra = comando[0]
-                
-                if palabra == "adios nao" or palabra == "me tengo que ir":
+                command_type = detect_command_type(palabra)
+
+                if(command_type == "despedida_nao"):
                     speech_proxy.say("Hasta luego.")
                     shutdown = True
                     break
-                elif palabra == "nao detente":
+                elif command_type == "pausa_lectura":
                     speech_proxy.say("Deteniendo la lectura.")
                     pause = True
                     time.sleep(0.5)
@@ -76,7 +86,10 @@ def conversation(ip, port):
         "adios nao", "nao para", "nao detente", "me tengo que ir",
         "Lovecraft", "Arsene", "Doctor Jekyll"
     ]
-    voice_recon_proxy.setVocabulary(nao_vocabulary, False)
+    
+    # Obtiene todas las frases del vocabulario para configurarlo en el proxy
+    all_phrases = [phrase for phrases in nao_vocabulary.values() for phrase in phrases]
+    voice_recon_proxy.setVocabulary(all_phrases, False)
     voice_recon_proxy.subscribe("NAO_listen")
     
     #### Stop flag threads
@@ -89,34 +102,39 @@ def conversation(ip, port):
             comando = memory.getData("WordRecognized")
             if comando and len(comando) > 0:
                 palabra = comando[0]
-                
-                if palabra == "quiero leer":
+                command_type = detect_command_type(palabra)
+
+                if command_type == "lectura_libro":
                     speech_proxy.say("Por favor, dime el nombre del libro que quieres escuchar.")
                     
                     time.sleep(7)  # Pausa para permitir respuesta
                     book_command = memory.getData("WordRecognized")
-                    bookselected = "Lovecraft"
-
-                    if book_command and any(book in book_command[0] for book in ["Lovecraft", "Arsene", "Doctor Jekyll"]):
-                        bookselected = book_command[0]
+                    
+                    if book_command: 
+                        bookselected = None
+                        for book in nao_vocabulary["selección_libro"]:
+                            if book in book_command[0]:
+                                bookselected = book
+                                break
 
                     if bookselected:
-                        speech_proxy.say("Has mencionado el libro: Lovecraft")
+                        speech_proxy.say("Has mencionado el libro: {bookselected}")
                         speech_proxy.say("Dime qué capítulo quieres escuchar.")
                         
                         time.sleep(5)
                         chapter_command = memory.getData("WordRecognized")
-                        if chapter_command and "Capítulo" in chapter_command[0]:
-                            chapter_number = int(chapter_command[0].split()[1])
-                            
-                            pause = False
-                            read_chapter_nao(bookselected, chapter_number, speech_proxy)
-                            
-                            while not pause and not shutdown:
-                                time.sleep(0.1)
-                            
-                            if pause:
-                                speech_proxy.say("Lectura pausada.")
+                        if chapter_command: 
+                            for cap in chapter_command[0]:
+                                chapter_number = int(cap.split()[1])
+                                pause = False
+                                read_chapter_nao(bookselected,chapter_number,speech_proxy)
+
+                                while not pause and not shutdown:
+                                    time.sleep(0.1)
+
+                                if pause:
+                                    speech_proxy.say("Lectura pausada")
+                                break
                     else:
                         speech_proxy.say("Libro no reconocido.")
                     
