@@ -1,3 +1,6 @@
+# Robo-Tlacuaches
+
+# Frases generadas con ayuda de ChatGPT
 nao_vocabulary = {
    "saludo_nao": [
     "hola nao", "buenos días", "buenas tardes", "buenas noches",
@@ -104,8 +107,8 @@ nao_vocabulary = {
     "cuéntame un libro", "quiero oír una historia", "puedes leer una historia", 
     "lee para nosotros", "lee algo de un libro", "puedes empezar una lectura", 
     "quiero escuchar algo nao", "cuéntame algo de lectura", "quiero escuchar lo que lees", 
-    "lee algo interesante", "puedes contarme algo", "lee cualquier cosa", 
-    "quiero que comiences a leer", "quiero escuchar lo que lees nao", "haz una lectura para mí nao"
+    "puedes contarme algo", "lee cualquier cosa", 
+    "quiero que comiences a leer", "haz una lectura para mí nao"
     ],
 
     "seleccion_libro": [
