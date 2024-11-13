@@ -1,5 +1,3 @@
-
-
 nao_vocabulary = {
    "saludo_nao": [
     "hola nao", "buenos días", "buenas tardes", "buenas noches",
@@ -27,49 +25,48 @@ nao_vocabulary = {
     "me despido nao", "cuídate nao", "nos vemos", 
     "adiós amigo", "hasta la próxima", "nos vemos nao",
     "me voy nao", "te dejo nao", "ya me voy nao",
-    "nao, tengo que irme", "hasta luego compañero", 
+    "nao tengo que irme", "hasta luego compañero", 
     "nos vemos después nao", "me despido por ahora",
-    "me voy, adiós", "nao, nos veremos después", 
+    "me voy adiós", "nao nos veremos después", 
     "cuídate mucho nao", "adiós por hoy", "nos vemos pronto nao",
     "hasta la próxima nao", "que tengas un buen día nao", 
-    "que estés bien nao", "hasta luego, cuídate nao", 
-    "te veo en otro momento nao", "ha sido un gusto, adiós nao",
+    "que estés bien nao", "hasta luego cuídate nao", 
+    "te veo en otro momento nao", "ha sido un gusto adiós nao",
     "me retiro nao", "nos vemos más tarde", 
-    "cuídate, nos vemos luego", "me tengo que marchar nao",
-    "hasta la vista nao", "me voy, nos vemos luego", 
+    "cuídate nos vemos luego", "me tengo que marchar nao",
+    "hasta la vista nao", "me voy nos vemos luego", 
     "me despido hasta la próxima", "me tengo que despedir nao",
-    "nos vemos mañana", "descansa nao", "cuídate mucho, hasta luego",
-    "hasta otra nao", "nao, que tengas una buena noche", 
-    "gracias por todo, adiós nao", "fue un gusto, adiós",
-    "me tengo que despedir", "nao, ha sido un placer",
-    "nos vemos pronto, cuídate", "que estés bien hasta luego",
-    "me voy, hasta luego", "ha sido genial, adiós nao", 
-    "hasta luego, amigo nao", "adiós, nos veremos"
+    "nos vemos mañana", "descansa nao", "cuídate mucho hasta luego",
+    "hasta otra nao", "nao que tengas una buena noche", 
+    "gracias por todo adiós nao", "fue un gusto adiós",
+    "me tengo que despedir", "nao ha sido un placer",
+    "nos vemos pronto cuídate", "que estés bien hasta luego",
+    "me voy hasta luego", "ha sido genial adiós nao", 
+    "hasta luego amigo nao", "adiós nos veremos"
     ],
 
     "pausa_lectura": [
     "nao detente", "nao para", "pausa", "detener lectura", 
     "detente nao", "para nao", "pausa lectura", "haz una pausa",
     "detén la lectura", "detente un momento nao", "nao pausa", 
-    "haz pausa nao", "nao, por favor pausa", "detente ya nao",
-    "detén la lectura nao", "nao, deténte", "espera un momento nao",
+    "haz pausa nao", "nao por favor pausa", "detente ya nao",
+    "detén la lectura nao", "nao detente", "espera un momento nao",
     "quiero hacer una pausa", "haz una pausa en la lectura", 
-    "para un momento nao", "nao, espera un momento", "nao, pausa la lectura",
-    "pausa, por favor", "quiero que pares un momento", 
-    "detente un momento", "para por favor nao", "nao, para ya",
-    "haz una pausa en la lectura nao", "detente, quiero pensar",
-    "espera, detén la lectura", "pausa, quiero escuchar luego",
-    "haz una pausa un momento", "nao, para la lectura", 
-    "detén el libro", "nao, pausa por favor", "quiero que detengas la lectura",
-    "haz una pausa breve", "nao, pausa un momento", "pausa ya", 
+    "para un momento nao", "nao espera un momento", "nao pausa la lectura",
+    "pausa por favor", "quiero que pares un momento", 
+    "detente un momento", "para por favor nao", "nao para ya",
+    "haz una pausa en la lectura nao", "detente quiero pensar",
+    "espera detén la lectura", "pausa quiero escuchar luego",
+    "haz una pausa un momento", "nao para la lectura", 
+    "detén el libro", "nao pausa por favor", "quiero que detengas la lectura",
+    "haz una pausa breve", "nao pausa un momento", "pausa ya", 
     "haz una pausa ahora", "espera un momento nao", 
     "detén la lectura un momento", "quiero que pares ahora", 
     "haz pausa ahora nao", "haz pausa inmediatamente nao", 
-    "haz una pausa en esto", "nao, quiero que te detengas", 
-    "espera, pausa por favor", "para ya nao", "espera, pausa ahora",
+    "haz una pausa en esto", "nao quiero que te detengas", 
+    "espera pausa por favor", "para ya nao", "espera pausa ahora",
     "detente por un momento nao"
     ],
-
 
     "reanudar_lectura": [
     "reanuda", "continúa", "sigue leyendo", "nao sigue", 
@@ -142,7 +139,7 @@ nao_vocabulary = {
     "volver a la página anterior", "regresar al capítulo anterior", 
     "volver al capítulo anterior", "ir al capítulo anterior", "cambiar al capítulo anterior"
     ],
-    
+
     "agradecimiento_nao": [
     "gracias nao", "te agradezco", "muy amable", "eres genial nao", 
     "me gusta escucharte", "gracias por leerme", "muchas gracias", 
