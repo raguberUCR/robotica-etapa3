@@ -1,0 +1,91 @@
+# Entornos virtuales
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Configuración de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de configuración y de entorno
+.env
+*.env
+*.env.*
+*.secret
+*.directory
+
+# Archivos de distribución
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+
+# Archivos de compilación
+build/
+dist/
+*.manifest
+*.spec
+
+# Logs y archivos temporales
+*.log
+*.bak
+*.swp
+*.tmp
+*.temp
+*.pid
+*.err
+*.out
+
+# Configuración de IDEs y editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# Configuración de Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Archivos de cobertura de pruebas
+htmlcov/
+.tox/
+.nox/
+coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# PyInstaller
+# Crea varios archivos de build/ y dist/
+/dist/
+/build/
+*.spec
+
+# mypy
+.mypy_cache/
+.dmypy.json
+.dmypy.json
+
+# Pyre
+.pyre/
+
+# Pytype
+.pytype/
+
+# Archivos de profile de ipython
+profile_default/
+
+# Modelos, datos y otros archivos de proyecto específicos
+*.h5
+*.hdf5
+*.csv
+*.db
+*.sqlite3
+.DS_Store
+Thumbs.db
