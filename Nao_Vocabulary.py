@@ -79,7 +79,7 @@ nao_vocabulary = {
     "sigue con la lectura", "continúa desde ahí", "nao, reanuda",
     "prosigue con la lectura", "sigue leyendo nao", 
     "reanuda el libro", "continúa leyendo nao", "retoma donde dejaste",
-    "puedes seguir leyendo", "sigue adelante", "reanuda donde pausaste",
+    "puedes seguir leyendo", " adelante", "reanuda donde pausaste",
     "prosigue nao", "reanuda, por favor", "nao, puedes seguir",
     "puedes reanudar la lectura", "prosigue por donde estabas",
     "retoma desde donde estabas", "retoma nao", "sigue por favor nao",
@@ -107,7 +107,7 @@ nao_vocabulary = {
     "cuéntame un libro", "quiero oír una historia", "puedes leer una historia", 
     "lee para nosotros", "lee algo de un libro", "puedes empezar una lectura", 
     "quiero escuchar algo nao", "cuéntame algo de lectura", "quiero escuchar lo que lees", 
-    "puedes contarme algo", "lee cualquier cosa", 
+     "puedes contarme algo", "lee cualquier cosa", 
     "quiero que comiences a leer", "haz una lectura para mí nao"
     ],
 
